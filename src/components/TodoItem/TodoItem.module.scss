@@ -1,0 +1,46 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 170, 109);
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    min-height: 40px;
+
+    &+.todos__item {
+      margin-top: 20px;
+    }
+
+    &__text {
+      color: var(--text-default);
+      font-weight: 500;
+    }
+
+    &__actions {
+      &__button {
+        background-color: transparent !important;
+        border: none;
+        cursor: pointer;
+
+        &:hover .icons {
+          transform: scale(1.05);
+        }
+      }
+
+      .icons {
+        color: var(--black);
+        font-size: 20px;
+        width: 16px;
+        height: auto;
+      }
+    }
+  }
+}
