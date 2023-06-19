@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
-  background: #FBFBFB;
+  background: var(--input-bg);
   border: 1px solid #E5E5EA;
   border-radius: 34px;
   padding: 5px;
@@ -19,7 +19,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
-    color: var(--text-default);
+    color: var(--text-secondary);
     width: 100%;
     padding: 8px 12px;
     transition: all 0.5s;
@@ -31,7 +31,7 @@
   }
 
   &__button {
-    background-color: #B14AD0;
+    background-color: var(--btn-bg);
     border: none;
     color: var(--text-white);
     border-radius: 50%;

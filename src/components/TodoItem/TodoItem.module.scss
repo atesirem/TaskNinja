@@ -6,25 +6,82 @@
 
   &__item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(255, 170, 109);
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--white);
     width: 100%;
     max-width: 500px;
     padding: 8px 10px;
     border-radius: 6px;
-    min-height: 40px;
+    height: auto;
+    min-height: 50px;
+    max-height: 400px;
+    overflow: auto;
+    cursor: pointer;
+    transition:  .3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 2px var(--blue);
+      transform: scale(1.02);
+    }
 
     &+.todos__item {
       margin-top: 20px;
     }
 
     &__text {
-      color: var(--text-default);
+      color: var(--text-secondary);
       font-weight: 500;
+      word-break: break-word;
+      line-height: 1.4;
+      font-size: 16px;
     }
 
+    &__edit {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &__textarea {
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+        font-size: 16px;
+        color: var(--orange);
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        resize: none;
+        padding: 8px;
+        font-family: inherit;
+        word-wrap: break-word;
+        word-break: break-all;
+
+        &+.todos__item__edit__button {
+          margin-top: 16px;
+        }
+      }
+
+      &__button {
+        align-self: flex-end;
+        min-width: 120px;
+        font-size: 14px;
+        padding: 8px 12px;
+        line-height: 1.2;
+        color: var(--white);
+        background-color: var(--orange);
+        border: 1px solid var(--orange);
+        border-radius: 6px;
+      }
+    }
+
+
     &__actions {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin-bottom: 16px;
+
       &__button {
         background-color: transparent !important;
         border: none;
